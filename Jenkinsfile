@@ -6,6 +6,7 @@ pipeline {
         stage("build") {
             steps {
                 echo "Building.."
+                echo $workspace
                 sh "pwd;"
                 sh "mvn clean install;"
             }
