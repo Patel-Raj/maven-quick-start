@@ -6,9 +6,7 @@ pipeline {
         stage("build") {
             steps {
                 echo "Building.."
-                sh "echo $workspace;"
-                sh "pwd;"
-                sh "mvn clean install;"
+                sh "mvn -p $workspace/maven-quick-start/pom.xml clean install;"
             }
         }
         
