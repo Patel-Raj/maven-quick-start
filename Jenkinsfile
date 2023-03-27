@@ -6,6 +6,8 @@ pipeline {
         stage("build") {
             steps {
                 echo "Building.."
+                sh "pwd;"
+                sh "mvn clean install;"
             }
         }
         
